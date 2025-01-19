@@ -1,0 +1,64 @@
+.content_container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  max-width: 90%;
+}
+
+.blured-dots_container::before,
+.blured-dots_container::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px); /* Ajusta el valor según sea necesario */
+  opacity: 0.7; /* Ajusta la opacidad según sea necesario */
+  z-index: 0; /* Coloca las manchas detrás del texto */
+}
+
+.blured-dots_container::before {
+  width: 200px;
+  height: 200px;
+  background-color: #42057E; /* Primer color de mancha */
+  top: 300px;
+  left: 50px;
+}
+
+.blured-dots_container::after {
+  width: 200px;
+  height: 200px;
+  background-color: #F50087; /* Segundo color de mancha */
+  bottom: -200px;
+  right: 10px;
+  z-index: -1;
+}
+
+
+li{
+  list-style: none;
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #42057E, #F50087);
+  padding: 20px;
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions button {
+  border: 1px solid white;
+}
+
+.actions :nth-child(1){
+  box-shadow: 5px 5px 30px 0px #42057E;
+}
+
+.actions :nth-child(2){
+  box-shadow: 5px 5px 30px -5px #F50087;
+}
+

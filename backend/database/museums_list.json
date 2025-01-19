@@ -1,0 +1,77 @@
+{
+  "museums":
+    [
+      {
+        "acronym": "MNA",
+        "name": "Museo Nacional de Antropología",
+        "evaluation": {
+          "colection": 100,
+          "temporary_exhibitions": 100,
+          "cultural_activities": 85,
+          "infrastructure": 100,
+          "service": 90,
+          "cost": 70
+        }
+      },
+      {
+        "acronym": "MUCHO",
+        "name": "Museo del Chocolate",
+        "evaluation": {
+          "colection": 90,
+          "temporary_exhibitions": 80,
+          "cultural_activities": 80,
+          "infrastructure": 30,
+          "service": 90,
+          "cost": 40
+        }
+      },
+      {
+        "acronym": "MBM",
+        "name": "Museo Banco de México",
+        "evaluation": {
+          "colection": 80,
+          "temporary_exhibitions": 80,
+          "cultural_activities": 50,
+          "infrastructure": 90,
+          "service": 80,
+          "cost": 100
+        }
+      },
+      {
+        "acronym": "CMCA",
+        "name": "Cencalli",
+        "evaluation": {
+          "colection": 80,
+          "temporary_exhibitions": 80,
+          "cultural_activities": 90,
+          "infrastructure": 90,
+          "service": 85,
+          "cost": 100
+        }
+      },
+      {
+        "acronym": "MTM",
+        "name": "Museo del Templo Mayor",
+        "evaluation": {
+          "colection": 90,
+          "temporary_exhibitions": 90,
+          "cultural_activities": 70,
+          "infrastructure": 80,
+          "service": 80,
+          "cost": 70
+        }
+      },
+      {
+        "acronym": "MS",
+        "name": "Museo Soumaya",
+        "evaluation": {
+          "colection": 100,
+          "temporary_exhibitions": 50,
+          "cultural_activities": 60,
+          "infrastructure": 100,
+          "service": 75,
+          "cost": 100
+        }
+      }
+    ]
+}

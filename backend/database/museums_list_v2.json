@@ -1,0 +1,184 @@
+{
+  "museums": [
+    {
+      "acronym": "MNA",
+      "name": "Museo Nacional de Antropología",
+      "evaluation": {
+        "colection": {
+          "value": 100,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 100,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 85,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 100,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 90,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 70,
+          "nameEs": "Costo"
+        }
+      }
+    },
+    {
+      "acronym": "MUCHO",
+      "name": "Museo del Chocolate",
+      "evaluation": {
+        "colection": {
+          "value": 90,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 80,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 80,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 30,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 90,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 40,
+          "nameEs": "Costo"
+        }
+      }
+    },
+    {
+      "acronym": "MBM",
+      "name": "Museo Banco de México",
+      "evaluation": {
+        "colection": {
+          "value": 80,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 80,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 50,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 90,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 80,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 100,
+          "nameEs": "Costo"
+        }
+      }
+    },
+    {
+      "acronym": "CMCA",
+      "name": "Cencalli",
+      "evaluation": {
+        "colection": {
+          "value": 80,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 80,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 90,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 90,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 85,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 100,
+          "nameEs": "Costo"
+        }
+      }
+    },
+    {
+      "acronym": "MTM",
+      "name": "Museo del Templo Mayor",
+      "evaluation": {
+        "colection": {
+          "value": 90,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 90,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 70,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 80,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 80,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 70,
+          "nameEs": "Costo"
+        }
+      }
+    },
+    {
+      "acronym": "MS",
+      "name": "Museo Soumaya",
+      "evaluation": {
+        "colection": {
+          "value": 100,
+          "nameEs": "Colección permanente"
+        },
+        "temporary_exhibitions": {
+          "value": 50,
+          "nameEs": "Exposiciones temporales"
+        },
+        "cultural_activities": {
+          "value": 60,
+          "nameEs": "Actividades culturales"
+        },
+        "infrastructure": {
+          "value": 100,
+          "nameEs": "Infraestructura"
+        },
+        "service": {
+          "value": 75,
+          "nameEs": "Servicio"
+        },
+        "cost": {
+          "value": 100,
+          "nameEs": "Costo"
+        }
+      }
+    }
+  ]
+}

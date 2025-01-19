@@ -1,0 +1,8 @@
+h1{
+  font-size: 2rem;
+  transition: all 0.3s ease;
+}
+
+#header_title {
+  font-size: 15px;
+}
