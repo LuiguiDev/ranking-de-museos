@@ -3,7 +3,7 @@ import '../styles/header.css'
 
 function AppHeader () {
   useEffect(() => {
-    const header = document.getElementById('main_header')
+    /* const header = document.getElementById('main_header') */
     const title = document.getElementById('header_title')
 
     window.addEventListener('scroll', () => {

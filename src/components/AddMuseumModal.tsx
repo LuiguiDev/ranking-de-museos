@@ -1,12 +1,12 @@
 import { useState } from 'react';
-import criteriaKeys from '../constants/evaluation';
+import criteriaKeys, { criteriaKeysTypes } from '../constants/evaluation';
 import '../styles/modal.css'
 import { EvaluationType, MuseumType } from '../types';
 
 interface InputRangeProps {
-  type: string,
+  type: criteriaKeysTypes,
   index: number,
-  setNewState: (params: number[]) => void
+  setNewState: (params: EvaluationType) => void
   prevState: EvaluationType
 }
 
@@ -18,11 +18,25 @@ function getGeneralEvaluation(values:number[]) {
   return Math.round(sum / 6)
 }
 
-const InputRange = ({ type, index, setNewState, prevState }: InputRangeProps) => {
+const InputRange = ({ type, setNewState, prevState }: InputRangeProps) => {
   function handleRangeChange(e:React.ChangeEvent<HTMLInputElement>) {
-    const value = Number(e.target.value )
+    const validateValue = (v: number) => {
+      if (v >= 0 || v <= 100) {
+        return v
+      }else {
+        console.log('error: evaluaicón inválida')
+        return 0
+      }
+    } 
+    const value = validateValue(Number(e.target.value ))
     const newState = structuredClone(prevState)
-    newState[type] = value
+
+    if (value >= 0 || value < 100) {      
+      newState[type] = value
+    }else {
+      console.log('error: evualuación inválida')
+    }
+
 
     setNewState(newState)
   }
@@ -57,16 +71,17 @@ interface modalProps {
 const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
   const [rangeValues, setRangeValues] = useState<EvaluationType>({
     "colection": 50,
-    "temporary_exhibitions": 80,
-    "cultural_activities": 80,
-    "infrastructure": 30,
-    "service": 90,
-    "cost": 40
+    "temporary_exhibitions": 50,
+    "cultural_activities": 50,
+    "infrastructure": 50,
+    "service": 50,
+    "cost": 50
   })
   const [museum, setMuseum] = useState<MuseumType>({
     name: '',
     acronym: '',
-    evaluation: rangeValues
+    evaluation: rangeValues,
+    general_evaluation: 0
   })
 
   function handleSetNewState (newState: EvaluationType) {
@@ -78,7 +93,7 @@ const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
     })
   }
 
-  function handleInputChange(e) {
+  function handleInputChange(e:React.ChangeEvent<HTMLInputElement>) {
     const {name, value} = e.target
 
     setMuseum({
@@ -87,7 +102,7 @@ const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
     })
   } 
 
-  function manageAddMuseum(e) {
+  function manageAddMuseum(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
     
     addMuseum(museum)
@@ -96,7 +111,7 @@ const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
 
   return(
     <div className="modal_container">
-      <form onSubmit={(e) => manageAddMuseum(e)}>
+      <form onSubmit={manageAddMuseum}>
         <div className="modal_header">
           <div className="museum name">
             <label htmlFor="name">Nombre del museo</label>
@@ -126,10 +141,9 @@ const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
             Object.keys(criteriaKeys).map((key, index) => {
               return(
                 <InputRange
-                  
-                  type={key}
+                                    
+                  type={key as criteriaKeysTypes}
                   index={index}
-                  rangeValue={rangeValues[key]}
                   setNewState={handleSetNewState}
                   prevState = {rangeValues}
               />
@@ -146,8 +160,7 @@ const AddMuseumModal = ({addMuseum, manageModal}: modalProps) => {
           <button className='cancel_btn'>Cancelar</button>
           <button
             type='submit'
-            className='add_btn'
-            onClick={manageAddMuseum}>
+            className='add_btn'>
             Añadir Museo
           </button>
         </div>

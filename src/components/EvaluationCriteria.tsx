@@ -1,6 +1,6 @@
 import { MuseumsListType } from '../types'
 import '../styles/table.css'
-import criteriaKeys from '../constants/evaluation'
+import criteriaKeys, { criteriaKeysTypes } from '../constants/evaluation'
 
 const EvaluationCriteria = ({museums}: MuseumsListType) => {
 
@@ -23,7 +23,7 @@ const EvaluationCriteria = ({museums}: MuseumsListType) => {
           Object.keys(criteriaKeys).map(key => {
             return(
               <tr>
-                <th>{criteriaKeys[key]}</th>
+                <th>{criteriaKeys[key as criteriaKeysTypes]}</th>
                 {
                   museums.map(museum => {
                     return(

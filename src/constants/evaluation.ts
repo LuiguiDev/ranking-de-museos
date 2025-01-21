@@ -1,3 +1,5 @@
+export type criteriaKeysTypes = 'colection' | 'temporary_exhibitions' | 'cultural_activities' | 'service' | 'cost'
+
 interface CriteriaKeysType {
   colection: string,
   temporary_exhibitions: string,

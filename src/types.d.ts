@@ -2,18 +2,19 @@ export type EvaluationRange = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 
 
 
 export interface EvaluationType {
-  colection: EvaluationRange,
-  temporary_exhibitions: EvaluationRange,
-  cultural_activities: EvaluationRange,
-  infrastructure: EvaluationRange,
-  service: EvaluationRange,
-  cost: EvaluationRange
+  colection: number,
+  temporary_exhibitions: number,
+  cultural_activities: number,
+  infrastructure: number,
+  service: number,
+  cost: number
 }
 
 export interface MuseumType {  
   acronym: string,
   name: string,
-  evaluation: EvaluationType
+  evaluation: EvaluationType,
+  general_evaluation: number
 }
 
 export interface MuseumsListType {
