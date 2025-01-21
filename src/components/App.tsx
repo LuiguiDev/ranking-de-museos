@@ -8,7 +8,7 @@ import MuseumsList from './MuseumsList';
 import AddMuseumModal from './AddMuseumModal';
 import Actions from './Actions';
 
-const DATA_SOURCE = '../../backend/database/museums_list.json'
+const DATA_SOURCE = 'https://api.npoint.io/48dc0b8e1bbcc5d4a67d'
 
 async function getData () {
   return await fetch(DATA_SOURCE)
